@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.select{
+    margin-top: 25px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    text-align: left;
+    padding: 7px;
+    border-radius: 5px;
+}

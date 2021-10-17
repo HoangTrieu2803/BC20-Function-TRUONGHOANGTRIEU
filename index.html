@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+       <!-- -------------------------------------Bai1------------------------------------- -->
+      <h2>Bai 1</h2>
+        <form class="row">
+            <div class="form-group col-4">
+              <label for="inputDiemChuan"></label>
+              <input type="number" class="form-control" id="inputDiemChuan" placeholder="Diem chuan">
+            </div>
+            <div class="form-group col-4">
+              <select id="doiTuong" class="select" >
+                <option value="">Chon doi tuong</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="form-group col-4">
+              <select id="khuVuc" class="select">
+                <option value="">Chon khu vuc</option>
+                <option value="X">X</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+            </div>
+              <div class="form-group col-4">
+                <label for="inputDiem1"></label>
+                <input type="number" class="form-control" id="inputDiem1" placeholder="Diem mon thu 1">
+              </div>
+              <div class="form-group col-4">
+                <label for="inputDiem2"></label>
+                <input type="number" class="form-control" id="inputDiem2" placeholder="Diem mon thu 2">
+              </div>
+              <div class="form-group col-4">
+                <label for="inputDiem2"></label>
+                <input type="number" class="form-control" id="inputDiem3" placeholder="Diem mon thu 3">
+              </div>
+            <button type="button" class="btn btn-primary" id="btnResult">Ket qua</button>
+          </form>
+          <p id="txtResult"></p>
+          <!-- -------------------------------------Bai2------------------------------------- -->
+          <h2>Bai 2</h2>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputName" placeholder="Nhap ho ten">
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="inputKW" placeholder="Nhap so KW">
+            </div>
+            <button type="button" class="btn btn-primary" id="btnTienDien">Tinh tien dien</button>
+          </form>
+          <p id="txtTienDien"></p>
+          <!-- -------------------------------------Bai3------------------------------------- -->
+          <h2>Bai 3</h2>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputName2" placeholder="Nhap ho ten">
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="inputThuNhap" placeholder="Nhap tien thu nhap nam">
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="inputSoNguoi" placeholder="So nguoi phu thuoc">
+            </div>
+            <button type="button" class="btn btn-primary" id="btnTienThue">Tinh tien thue</button>
+          </form>
+          <p id="txtTienThue"></p>
+           <!-- -------------------------------------Bai4------------------------------------- -->
+           <h2>Bai 4</h2>
+           <form>
+             <div class="form-group">
+               <select  class="select" id="selectValue">
+                <option value="">Chon loai khach hang</option>
+                <option value="ND">Nha Dan</option>
+                <option value="DN">Doanh Nghiep</option>
+               </select>
+             </div>
+             <div class="form-group">
+               <input type="text" class="form-control" id="inputMaKH" placeholder="Nhap ma khach hang">
+             </div>
+             <div class="form-group">
+              <input type="number" class="form-control" id="inputKenh" placeholder="Nhap so kenh cao cap">
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="inputKetNoi" placeholder="Nhap so ket noi" style="display:none;">
+            </div>
+             <button type="button" class="btn btn-primary" id="btnTienCap">Tinh tien cap</button>
+           </form>
+           <p id="txtTienCap"></p>
+    </div>
+    <script>
+      document.getElementById("selectValue").onchange = function() {anKetNoi()};
+      function anKetNoi(){
+      var anKN = document.getElementById("selectValue").value;
+      if(anKN == "DN"){
+          document.getElementById("inputKetNoi").style.display = "block";
+      }else{
+          document.getElementById("inputKetNoi").style.display = "none";
+      }
+    }
+      </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
